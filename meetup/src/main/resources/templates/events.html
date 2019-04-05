@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Honeywell MeetupGroups</title>
+
+
+
+</head>
+
+<body>
+<h1><img src="images/honeywell.png"/>Events for <div th:text="${groupname}" /></h1>
+
+<h3>
+<ul></ul>
+</h3>
+
+
+<div class="col-xs-12">
+
+    <table id="event" class="table table-hover table-bordered table-striped table-condensed">
+        <thead>
+        <tr>
+           
+            <th>Event Name</th>
+            <th>Contact</th>
+            <th>Date</th>
+                                </tr>
+        </thead>
+        <tbody>
+        <tr th:each="event : ${eventList}">
+            <td th:text="${event.name}"></td>
+            <td th:text="${event.contact}"></td>
+            <td th:text="${#dates.formatISO(event.date)}"></td>
+           <td><a class="button" href="/sendNomination">Send Nomination</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div> 
+
+<a href="/events">
+<div class="homeElement"><h5>Send This Event To Friend</h5></div>
+</a>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset = "ISO-8859-1" />
+      <link href = "css/styles.css" rel = "stylesheet"/>
+      <title>Honeywell Application</title>
+</head>
+
+<body>
+
+
+<div align="right">
+ <a th:href="@{/logout}">Sign Out</a>
+ </div>
+
+<h1 th:inline="text">Hello Users</div>!!</h1>
+<h1>Welcome to <img src="images/honeywell.png"/ style="width:80px;height: 80px"> &nbsp; Meetup Application </h1>
+<h3> Meetup Groups </h3>
+<div class="container" style="align-items: center">
+
+<a class="button" href="/hackers">
+<div class="homeElement"><h3>Hackers Group</h3></div>
+</a>
+<a class="button" href="/javadevelopers">
+<div class="homeElement"><h3>Java Developers Groups</h3></div>
+</a>
+<a class="button" href="/travellers">
+<div class="homeElement"><h3>Travellers Group</h3></div>
+</a>
+</div>
+</body>
+</html>
